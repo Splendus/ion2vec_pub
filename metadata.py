@@ -27,15 +27,11 @@ def read_gensim_txt(f_path, dictionary = False):
 
 # Constants
 mol_df = pd.read_csv('Ions2Molecules.csv') # mapping ion to molecule names
-i2m_dict = {}
-for ion in ion_names: 
-    i2m_dict[ion] = mol_df[mol_df['ions'] == ion]['moleculeNames'].item()
 hmdb_df  = pd.read_csv('datasets/HMDB4_database.csv')
 id_df   = pd.read_csv('datasets/ions2ids.csv') # mapping ions to HMDB ids
 ion2hmdb  = {ion: ast.literal_eval(id_df[id_df['ion']==ion]['hmdbID'].item())
                         for ion in id_df['ion']}
 ds_df = pd.read_csv('datasets/theos_recom/ions_datasets.csv') # mapping ions to datasets
-ion2ds_dict = {ion: ast.literal_eval(ds_df[ds_df['ion'] == ion]['datasets'].item()) for ion in ion_names}
 
 class post_processing:
     def __init__(self, vec_file, name_file = None, u_embed = False, 
@@ -51,8 +47,17 @@ class post_processing:
         self.iv_df, self.name_df = self.get_vecs() # ion_vector dataframe, ion_name dataframe
         self.ion_names = self.name_df[0].tolist() 
 
+        self.ion2mol_dict = {}
+        self.ion2ds_dict = {}
+        for ion in self.ion_names: 
+            self.ion2mol_dict[ion] = mol_df[mol_df['ions'] == ion]['moleculeNames'].item()
+            self.ion2ds_dict[ion] = ast.literal_eval(ds_df[ds_df['ion'] == ion]['datasets'].item()) 
+
     def get_vecs(self):
-        if self.name_file: # vecs from gensim
+        if self.name_file: # vecs from rw
+            iv_df = pd.read_csv(self.vec_file, sep = '\t', header= None)       # read ion vectors and their labels
+            name_df= pd.read_csv(self.name_file, sep = '\t', header = None )   # sep '\t' for tsv files
+        else: # vecs from gensim vanilla
             with open(self.vec_file, 'r') as f:
                 lines = [i.split() for i in f]
             # vocab_size = int(lines[0][0])
@@ -61,9 +66,6 @@ class post_processing:
 
             iv_df = pd.DataFrame(ion2vec).T
             name_df= pd.DataFrame(iv_df.index.tolist()) 
-        else:
-            iv_df = pd.read_csv(self.vec_file, sep = '\t', header= None)       # read ion vectors and their labels
-            name_df= pd.read_csv(self.meta_file, sep = '\t', header = None )   # sep '\t' for tsv files
         return iv_df, name_df
     
     def get_class(self, class_type): # super_class, class, sub_class etc. 
@@ -93,7 +95,7 @@ class post_processing:
         meta_df : Dataframe containing all meta information about the ions. 
         '''
         meta_df = self.vec_names.rename(columns={0:'ion'})
-        meta_df['mol_name'] = [map_df[map_df['ions'] == ion]['moleculeNames'].item() for ion in meta_df['ion']] # adding molecular names
+        meta_df['mol_name'] = [mol_df[mol_df['ions'] == ion]['moleculeNames'].item() for ion in meta_df['ion']] # adding molecular names
         # adding ion classes
         for class_type in ['super_class', 'class', 'sub_class']:
             ion2class_dict = self.get_class(class_type)
@@ -170,17 +172,65 @@ class post_processing:
 
         return meta_df
 
-    def get_cos_sim(self):
+    def get_embed_sim(self):
         '''
-        returns cosine similarity matrix
+        returns cosine similarity matrix for embedding
         '''
         cos_df = pd.DataFrame(cosine_similarity(self.iv))
 
         idx2ion = self.vec_names.to_dict()[0]
-        self.iv.index = self.iv.index.map(idx2ion)
         cos_df.index = cos_df.index.map(idx2ion)
         cos_df.columns = cos_df.columns.map(idx2ion)
         return cos_df 
+    
+    def get_coloc_df(self, dsid):
+        '''
+        returns a colocalization dataframe for the dataset given by dsid.
+        Note, that this is a work around for the validation datasets, where
+        only positive adducts were considered.  
+        '''
+        sm = metaspace.SMInstance()
+        ds = sm.dataset(id=ds_id)
+        tmp = ds.all_annotation_images(fdr=fdr,
+                                    database=database,
+                                    only_first_isotope=only_first_isotope,
+                                    scale_intensity=scale_intensity,
+                                    hotspot_clipping=hotspot_clipping,
+                                    offSample = False)
+        ion_array = np.array(
+            [scipy.signal.medfilt2d(x._images[0], kernel_size=3).flatten() for x in tmp])
+        df = pd.DataFrame(pairwise_kernels(ion_array, metric='cosine'),
+                        columns = [x.formula + x.adduct + '+' for x in tmp], # + '+' is only a temporary fix
+                        index=[x.formula + x.adduct + '+' for x in tmp])     # and of course only works for the positive mode 
+        return df
+
+    def get_mean_coloc(self, dsid_list, query_ions = None):
+        '''
+        returns a dataframe with colocalizations averaged over the datasets
+        given by the IDs in dsid_list. If a list of query_ions is given
+        the coloc dataframe is calculated for only those ions. 
+        '''
+        if query_ions:
+            df_list = []
+            for dsid in dsid_list:
+                coloc_df = self.get_coloc_df(dsid)
+                coloc_df = coloc_df.loc[coloc_df.index.isin(query_ions), 
+                                        coloc_df.columns.isin(query_ions)]
+                df_list.append(coloc_df)
+        else:
+            df_list = [self.get_coloc_df(dsid) for dsid in dsid_list]
+ 
+        all_colocs_df = pd.concat(df_list)
+        by_row_index = all_colocs_df.groupby(all_colocs_df.index)
+        mean_coloc_df = by_row_index.mean() # average colocs
+        # make sure, that column and row index match
+        mean_coloc_df = mean_coloc_df[mean_coloc_df.index] 
+        return mean_coloc_df
+
+
+
+        
+        
 
 
 def get_meta_df(vec_file, meta_file=None, txt = False, embed=False,
@@ -190,7 +240,8 @@ def get_meta_df(vec_file, meta_file=None, txt = False, embed=False,
     id_df = pd.read_csv('datasets/ions2ids.csv') # mapping ions to HMDB ids    
         
     hmdb = pd.read_csv("datasets/HMDB4_database.csv") # mapping ion_id to classes
-    ion2hmdb = {ion: ast.literal_eval(id_df[id_df['ion']==ion]['hmdbID'].item()) for ion in id_df['ion']}
+    ion2hmdb = {ion: ast.literal_eval(id_df[id_df['ion']==ion]['hmdbID'].item())
+                     for ion in id_df['ion']}
     
     if txt: # read in gensim wordvector.txt file
         with open(vec_file, 'r') as f:

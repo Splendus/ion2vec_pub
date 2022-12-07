@@ -1,0 +1,258 @@
+,ion,mol_name,super_class,class,subclass,umap_x,umap_y
+0,C9H17NO4+H+,N-lactoyl-Leucine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.370921,-3.8737454
+1,C10H7NO3+Na+,"1-Nitronaphthalene-7,8-oxide",Organoheterocyclic compounds,Quinolines and derivatives,Quinoline carboxylic acids,16.345324,8.384027
+2,C24H50NO7P+H+,LysoPC(16:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,2.2668893,-3.8647497
+3,C4H9N3O2+K+,Beta-Guanidinopropionic acid,Organic nitrogen compounds,Organonitrogen compounds,Guanidines,16.300283,8.378579
+4,C10H11NO+Na+,"3,4-Dihydro-4-[(5-methyl-2-furanyl)methylene]-2H-pyrrole",Organoheterocyclic compounds,Heteroaromatic compounds,,16.563847,8.37477
+5,C7H15NO3+H+,Malonyl-Carnitin,Organic nitrogen compounds,Organonitrogen compounds,Quaternary ammonium salts,16.444584,8.350758
+6,C28H33O14+Na+,Pelargonidin 3-sophoroside,Phenylpropanoids and polyketides,Flavonoids,Flavonoid glycosides,16.219284,8.123397
+7,C29H47NO4+Na+,23-Acetoxysoladulcidine,Lipids and lipid-like molecules,Steroids and steroid derivatives,Steroidal alkaloids,2.4015963,-3.8276422
+8,C23H45NO4+H+,L-Palmitoylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,16.379702,8.503661
+9,C9H14N4O3+K+,"(6R)-6-(L-Erythro-1,2-Dihydroxypropyl)-5,6,7,8-tetrahydro-4a-hydroxypterin",Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",16.459873,8.632119
+10,C7H15NO3+K+,Malonyl-Carnitin,Organic nitrogen compounds,Organonitrogen compounds,Quaternary ammonium salts,2.3524647,-3.992686
+11,C11H20N2O3+H+,Leucylproline,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.264432,-3.977994
+12,C9H20N2O2+H+,"N6,N6,N6-Trimethyl-L-lysine",Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",16.23371,8.121093
+13,C24H32O5+Na+,Lucidone B,Phenylpropanoids and polyketides,Coumarins and derivatives,,21.042734,8.165881
+14,C10H7NO3+H+,"1-Nitronaphthalene-7,8-oxide",Organoheterocyclic compounds,Quinolines and derivatives,Quinoline carboxylic acids,2.4686332,-4.8025365
+15,C10H11NO2+Na+,"N,N-dimethylindoliumolate",Organoheterocyclic compounds,Indoles and derivatives,Hydroxyindoles,2.3850658,-3.8338187
+16,C26H30O12+Na+,"6-({8,9-dihydroxy-17-methoxy-10-oxo-2-oxatricyclo[13.2.2.1³,⁷]icosa-1(17),3,5,7(20),15,18-hexaen-4-yl}oxy)-3,4,5-trihydroxyoxane-2-carboxylic acid",Phenylpropanoids and polyketides,Stilbenes,Stilbene glycosides,2.4486082,-4.8491554
+17,C21H22O5+H+,"3-(2-hydroxy-4-methoxyphenyl)-8,8-dimethyl-2H,3H,4H,8H-pyrano[2,3-f]chromen-3-ol",Phenylpropanoids and polyketides,2-arylbenzofuran flavonoids,,2.3499517,-3.8912063
+18,C8H17NO2+H+,DL-2-Aminooctanoic acid,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.3578622,-4.711734
+19,C11H21NO4+H+,O-isobutyryl-L-carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,16.53943,8.317162
+20,C15H22N2O4+H+,Leucyl-Tyrosine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",20.78593,8.4591055
+21,C10H16N4O3+H+,Homocarnosine,Organic acids and derivatives,Peptidomimetics,Hybrid peptides,2.2893796,-3.740506
+22,C22H22O7+H+,5'-Methoxycurcumin,Organoheterocyclic compounds,Benzopyrans,1-benzopyrans,16.305391,8.137098
+23,C10H19NO4+H+,O-propanoyl-carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,20.807144,8.3939905
+24,C17H14O10+H+,"3,4,5-trihydroxy-6-({7-oxo-7H-furo[3,2-g]chromen-4-yl}oxy)oxane-2-carboxylic acid",Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,21.00785,8.196955
+25,C25H49NO4+H+,O-octadecanoyl-R-carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,2.3091037,-3.7199712
+26,C15H22N6O5S+H+,S-adenosyl-L-methioninate,0,0,0,16.311712,8.425282
+27,C26H52NO6P+H+,LysoPC(P-18:1(9Z)),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,2.2578096,-3.6158602
+28,C25H47NO4+H+,Octadecenoylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,2.4173024,-4.024559
+29,C37H68O4+H+,Cohibin D,Lipids and lipid-like molecules,Fatty Acyls,Fatty alcohols,16.276276,8.538885
+30,C12H20N2O3+H+,Pirbuterol,Organoheterocyclic compounds,Pyridines and derivatives,Hydroxypyridines,9.559375,1.721213
+31,C26H50NO7P+H+,2-linoleoyl-sn-glycero-3-phosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,21.058865,8.258921
+32,C8H20NO6P+H+,Glycerophosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,16.206104,8.159047
+33,C35H66O4+H+,Artemoin D,Lipids and lipid-like molecules,Fatty Acyls,Fatty alcohols,16.159407,8.1222315
+34,C21H36O3+H+,"3,4-Dimethyl-5-pentyl-2-furandecanoic acid",Lipids and lipid-like molecules,Steroids and steroid derivatives,Pregnane steroids,21.13358,8.428872
+35,C26H52NO7P+H+,2-oleoyl-sn-glycero-3-phosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,21.082449,8.408101
+36,C37H66O4+H+,Montecristin,Lipids and lipid-like molecules,Fatty Acyls,Fatty alcohols,16.379972,8.436374
+37,C7H6O4+Na+,"2,4,6-trihydroxybenzaldehyde",Benzenoids,Phenols,Benzenetriols and derivatives,21.245102,8.490774
+38,C8H20NO6P+K+,Glycerophosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,9.776035,1.4629769
+39,C12H22O11+Na+,"6-({[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxane-2,3,4,5-tetrol",Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,10.059836,1.440459
+40,C10H15N5O10P2+H+,ADP,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,9.932146,1.4063828
+41,C10H14N5O7P+H+,2-hydroxy-dAMP,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine deoxyribonucleotides,9.869174,1.4187824
+42,C8H20NO6P+Na+,Glycerophosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,9.781151,1.528066
+43,C12H22O11+K+,"6-({[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy}methyl)oxane-2,3,4,5-tetrol",Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,10.166478,1.3460044
+44,C15H18O10+Na+,"6-{[3-(2,5-dihydroxyphenyl)propanoyl]oxy}-3,4,5-trihydroxyoxane-2-carboxylic acid",Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,2.0070546,-1.7886064
+45,C22H24N2O2+H+,Acrivastine,Benzenoids,Benzene and substituted derivatives,Styrenes,2.020716,-1.7059659
+46,C9H14N4O3+H+,"(6R)-6-(L-Erythro-1,2-Dihydroxypropyl)-5,6,7,8-tetrahydro-4a-hydroxypterin",Organic acids and derivatives,Peptidomimetics,Hybrid peptides,14.657544,14.062823
+47,C15H10O6+H+,"5-hydroxy-2-(3,4,5-trihydroxyphenyl)-4H-chromen-4-one",Phenylpropanoids and polyketides,Flavonoids,Flavones,9.778257,1.5068126
+48,C13H17NO3+Na+,Pandamarilactam 3x,Organoheterocyclic compounds,Dihydrofurans,Furanones,14.5011835,14.007645
+49,C6H12O6+K+,allo-inositol,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,10.019172,1.4790456
+50,C9H8O4+H+,"(2E)-3-(2,5-dihydroxyphenyl)prop-2-enoic acid",Phenylpropanoids and polyketides,Cinnamic acids and derivatives,Hydroxycinnamic acids and derivatives,2.0434566,-1.6989636
+51,C13H8F2O3+Na+,Diflunisal,Benzenoids,Benzene and substituted derivatives,Biphenyls and derivatives,2.0617907,-1.3496132
+52,C14H10O6+H+,"3,7,9-trihydroxy-1-(hydroxymethyl)-6H-benzo[c]chromen-6-one",Phenylpropanoids and polyketides,Coumarins and derivatives,,1.9858862,-1.3628012
+53,C13H13N3+H+,Varenicline,Organoheterocyclic compounds,Indoles and derivatives,Pyridoindoles,9.745649,1.57857
+54,C7H6O4+H+,"2,4,6-trihydroxybenzaldehyde",Benzenoids,Phenols,Benzenetriols and derivatives,2.1552334,-1.2944428
+55,C14H28O7+H+,"(R)-1-O-b-D-glucopyranosyl-1,3-octanediol",Lipids and lipid-like molecules,Fatty Acyls,Fatty acyl glycosides,9.851309,1.4656978
+56,C9H15N3O2+H+,L-Histidine trimethylbetaine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.0525916,-1.3481023
+57,C47H69O8P+H+,"PA(22:6(4Z,7Z,10Z,13Z,16Z,19Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphates,2.00938,-1.474029
+58,C10H16N5O13P3+H+,2-hydroxy-dATP,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,1.9735116,-1.425468
+59,C11H8O5+H+,2-(4-methoxy-1-benzofuran-5-yl)-2-oxoacetic acid,Phenylpropanoids and polyketides,Coumarins and derivatives,,9.8991165,1.515981
+60,C29H40N8O5+H+,Hordatine B,Phenylpropanoids and polyketides,2-arylbenzofuran flavonoids,,9.884212,1.4801596
+61,C35H64O4+H+,Cohibin B,Lipids and lipid-like molecules,Fatty Acyls,Fatty alcohols,2.1266966,-1.3517774
+62,C24H50NO7P+K+,LysoPC(16:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,1.8675225,-1.5604881
+63,C18H32O16+K+,D-Gal alpha 1->6D-Gal alpha 1->6D-Glucose,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,1.9204566,-3.1261961
+64,C15H28O4+K+,"7(14)-Bisabolene-2,3,10,11-tetrol",Lipids and lipid-like molecules,Prenol lipids,Sesquiterpenoids,2.0217338,-3.1836257
+65,C15H16O9S+K+,"{[1-(3,4-dihydroxyphenyl)-3-(2,4,6-trihydroxyphenyl)propan-2-yl]oxy}sulfonic acid",Phenylpropanoids and polyketides,"Linear 1,3-diarylpropanoids",Cinnamylphenols,1.9677024,-3.2014682
+66,C18H24O3+Na+,7alpha-hydroxyestradiol,Lipids and lipid-like molecules,Steroids and steroid derivatives,Estrane steroids,1.960516,-3.1538951
+67,C11H21NO5+H+,(R)-3-hydroxybutyrylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,1.9630755,-3.157428
+68,C6H14O12P2-H-,"1D-Myo-inositol 1,4-bisphosphate",Organic oxygen compounds,Organooxygen compounds,Alcohols and polyols,21.174,8.174864
+69,C10H14O4S-H-,(2-methyl-3-phenylpropoxy)sulfonic acid,Organic acids and derivatives,Organic sulfuric acids and derivatives,Arylsulfates,-8.568798,6.372109
+70,C6H12O6+Cl-,allo-inositol,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,-8.646297,6.442613
+71,C13H22O4-H-,2-Carboxy-4-dodecanolide,Organoheterocyclic compounds,Lactones,Gamma butyrolactones,-8.459921,6.6680126
+72,C6H13O9P-H-,D-galactopyranose 1-phosphate,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,-8.732776,6.5152354
+73,C22H32O2-H-,"(Z,Z)-2-Methyl-5-(8,11,14-pentadecatrienyl)-1,3-benzenediol",Lipids and lipid-like molecules,Fatty Acyls,Fatty acids and conjugates,-8.4081135,6.529302
+74,C20H32O2-H-,Oryzalexin E,Lipids and lipid-like molecules,Prenol lipids,Diterpenoids,-8.079653,6.5978436
+75,C18H34O2-H-,cis-Vaccenic acid,Lipids and lipid-like molecules,Fatty Acyls,Fatty acids and conjugates,-8.287817,6.4616613
+76,C18H36O2-H-,Hexyl dodecanoate,Lipids and lipid-like molecules,Fatty Acyls,Fatty acids and conjugates,-8.191233,6.541432
+77,C13H9NO-H-,9H-Carbazole-3-carboxaldehyde,Organoheterocyclic compounds,Indoles and derivatives,Carbazoles,-8.151476,6.5597754
+78,C6H9NO5-H-,N-Acetyl-L-aspartic acid,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",-8.705807,6.5203743
+79,C10H14N5O7P-H-,2-hydroxy-dAMP,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,-6.989808,5.5536
+80,C14H24O4-H-,Monomenthyl succinate,Organoheterocyclic compounds,Lactones,Gamma butyrolactones,-8.38162,6.592783
+81,C23H32N2O5-H-,Ramipril,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",-8.801086,6.419201
+82,C10H13N4O8P-H-,Inosinic acid,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,-8.173098,6.613541
+83,C16H32O2-H-,Dodecyl 2-methylpropanoate,Lipids and lipid-like molecules,Fatty Acyls,Fatty alcohol esters,-7.0287814,5.577116
+84,C10H16N4O3-H-,Homocarnosine,Organic acids and derivatives,Peptidomimetics,Hybrid peptides,-8.210928,6.5898037
+85,C9H14N4O3-H-,Alanyl-Histidine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",-8.605604,6.2602615
+86,C10H16O4-H-,Matsutakic acid A,Lipids and lipid-like molecules,Prenol lipids,Monoterpenoids,-8.488775,6.4017653
+87,C9H17O12P-H-,2-O-(6-Phospho-alpha-mannosyl)-D-glycerate,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,-8.78273,6.499428
+88,C18H32O2-H-,Octadecadienoate,Lipids and lipid-like molecules,Fatty Acyls,Lineolic acids and derivatives,-7.1306877,5.626633
+89,C26H32O3-H-,"Methyl (9Z)-6'-oxo-6,5'-diapo-6-carotenoate",Lipids and lipid-like molecules,Prenol lipids,Diterpenoids,-8.244642,6.3434978
+90,C37H71O8P-H-,PA(20:1(11Z)/14:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphates,-6.1824694,5.581625
+91,C29H41NO7-H-,Candoxatril,Benzenoids,Indanes,,-6.058456,5.507084
+92,C41H78NO8P-H-,PE-NMe2(18:1(11Z)/16:1(9Z)),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,-6.881345,5.731699
+93,C39H76NO8P-H-,PE-NMe2(18:1(9Z)/14:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,-6.1169415,5.5606914
+94,C45H78NO8P-H-,"PE-NMe2(18:1(11Z)/20:5(5Z,8Z,11Z,14Z,17Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,-6.093721,5.539606
+95,C12H18O3-H-,"3-Ethenyl-2,5-dimethyl-4-oxohex-5-en-2-yl acetate",Organic acids and derivatives,Keto acids and derivatives,Gamma-keto acids and derivatives,-6.1760883,5.591738
+96,C16H26O5-H-,Artemether,Lipids and lipid-like molecules,Prenol lipids,Sesquiterpenoids,-7.1815042,5.789998
+97,C16H24N3O8-H-,NNAL-N-glucuronide,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,-7.274233,5.8039827
+98,C39H73O8P-H-,"PA(14:0/22:2(13Z,16Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphates,-6.883746,5.6682177
+99,C10H12N5O6P-H-,"Adenosine 2',3'-cyclic phosphate","Nucleosides, nucleotides, and analogues",Purine nucleotides,Cyclic purine nucleotides,-6.1104865,5.5567303
+100,C10H17N3O6S-H-,Glutathione,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",-7.0289216,5.619214
+101,C10H14N5O8P-H-,Guanosine monophosphate,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,-8.43893,6.346521
+102,C6H8O7-H-,"D-Glucaro-1,4-lactone",Organic acids and derivatives,Carboxylic acids and derivatives,Tricarboxylic acids and derivatives,-6.9623547,5.636261
+103,C8H14O7-H-,"6-ethoxy-3,4,5-trihydroxyoxane-2-carboxylic acid",Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,-8.690189,6.242529
+104,C18H30O3S-H-,4-Dodecylbenzenesulfonic Acid,Benzenoids,Benzene and substituted derivatives,Benzenesulfonic acids and derivatives,-8.85545,6.232844
+105,C4H9N3O2+H+,Creatine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",-8.722544,6.221597
+106,C10H13N5O4+H+,Vidarabine,"Nucleosides, nucleotides, and analogues",Pyrimidine nucleosides,"Pyrimidine 2',3'-dideoxyribonucleosides",14.8811245,-11.24521
+107,C18H33NO+Na+,Linoleamide,Lipids and lipid-like molecules,Fatty Acyls,Fatty amides,3.2257128,9.716945
+108,C25H45NO4+H+,Linoleyl carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,14.704179,-10.879492
+109,C26H56NO6P+H+,1-octadecylglycero-3-phosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,15.112633,-11.486377
+110,C30H50NO7P+Na+,"LysoPC(22:6(4Z,7Z,10Z,13Z,16Z,19Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,3.67552,10.600844
+111,C26H54NO7P+H+,2-acetyl-1-alkyl-sn-glycero-3-phosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,3.1052265,9.564261
+112,C31H42O3+Na+,"Hydroxysintaxanthin 5,6-epoxide",Lipids and lipid-like molecules,Prenol lipids,Triterpenoids,3.248292,10.119499
+113,C34H34N4O4+H+,Protoporphyrin IX,Organoheterocyclic compounds,Tetrapyrroles and derivatives,Porphyrins,3.285998,10.14525
+114,C24H48NO7P+H+,LysoPC(16:1(9Z)),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,2.4647467,-6.227347
+115,C28H46O4+Na+,3-Dehydroteasterone,Lipids and lipid-like molecules,Steroids and steroid derivatives,"Bile acids, alcohols and derivatives",15.197405,-11.251801
+116,C24H50NO7P+Na+,LysoPC(16:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,3.644023,10.68348
+117,C29H45NO4+Na+,Cervonyl carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,3.136116,9.9032755
+118,C31H33N3O7S+H+,Zafirlukast metabolite M5,Benzenoids,Benzene and substituted derivatives,Benzenesulfonamides,2.787609,-6.1745095
+119,C28H46O4+H+,3-Dehydroteasterone,Lipids and lipid-like molecules,Steroids and steroid derivatives,"Bile acids, alcohols and derivatives",3.5682733,10.550414
+120,C10H13N4O8P+H+,Inosine 2'-phosphate,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,3.6737914,10.7783375
+121,C28H50NO7P+H+,"LysoPC(20:4(8Z,11Z,14Z,17Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,15.113458,-11.635043
+122,C24H50NO6P+H+,LysoPC(P-16:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,3.3324487,9.53716
+123,C11H18O11+Na+,"3,4,5-trihydroxy-6-{[3-hydroxy-2,2-bis(hydroxymethyl)propanoyl]oxy}oxane-2-carboxylic acid",Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,14.712006,-11.050689
+124,C6H14N4O2+H+,D-Arginine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.474263,-5.773393
+125,C10H13N4O8P+Na+,Inosine 2'-phosphate,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,3.6439292,10.236364
+126,C21H28N6O4S+Na+,"N-Desmethyl sildenafil (UK-103,320)",Benzenoids,Benzene and substituted derivatives,Benzenesulfonamides,2.2525485,-5.824554
+127,C10H15N5O4+H+,Asparaginyl-Histidine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.2918391,-6.1258125
+128,C18H35NO+H+,Oleamide,Lipids and lipid-like molecules,Fatty Acyls,Fatty amides,3.1243434,9.7008705
+129,C21H41NO4+H+,Tetradecanoylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,3.5956647,10.749941
+130,C28H28O6+Na+,Garcimangosone A,Lipids and lipid-like molecules,Prenol lipids,Sesquiterpenoids,15.169981,-11.537967
+131,C27H30O11+Na+,"3,4,5-trihydroxy-6-{[12-hydroxy-14-methoxy-6-(3-methylbut-2-en-1-yl)-8,17-dioxatetracyclo[8.7.0.0²,⁷.0¹¹,¹⁶]heptadeca-2(7),3,5,11,13,15-hexaen-5-yl]oxy}oxane-2-carboxylic acid",Phenylpropanoids and polyketides,Flavonoids,Flavonoid glycosides,2.3516662,-6.314553
+132,C24H48NO7P+Na+,LysoPC(16:1(9Z)),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.652576,-10.964766
+133,C10H12N4O5+Na+,Arabinosylhypoxanthine,"Nucleosides, nucleotides, and analogues",Purine nucleosides,,2.521402,-5.647423
+134,C28H50NO7P+Na+,"LysoPC(20:4(8Z,11Z,14Z,17Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,3.615989,9.998909
+135,C10H15N5O10P2+Na+,ADP,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine ribonucleotides,15.013676,-11.195439
+136,C10H26N4+H+,Spermine,Organic nitrogen compounds,Organonitrogen compounds,Amines,3.0235033,9.746409
+137,C28H52NO7P+H+,"LysoPC(20:3(8Z,11Z,14Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.833027,-11.051258
+138,C10H14N5O7P+Na+,2-hydroxy-dAMP,"Nucleosides, nucleotides, and analogues",Purine nucleotides,Purine deoxyribonucleotides,15.002294,-11.352309
+139,C23H43NO4+H+,trans-Hexadec-2-enoyl carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,3.7818003,9.95115
+140,C7H19N3+H+,Spermidine,Organic nitrogen compounds,Organonitrogen compounds,Amines,15.237314,-11.650369
+141,C26H50NO7P+Na+,2-linoleoyl-sn-glycero-3-phosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.789315,-10.9511595
+142,C6H6N2O2+H+,2-Aminonicotinic acid,Organoheterocyclic compounds,Azoles,Isoxazoles,3.3660197,10.077219
+143,C13H10N2O5+H+,Thalidomide arene oxide,Organoheterocyclic compounds,Isoindoles and derivatives,Isoindolines,15.167953,-10.899167
+144,C4H9N3O2+Na+,Beta-Guanidinopropionic acid,Organic nitrogen compounds,Organonitrogen compounds,Guanidines,3.4324694,10.07077
+145,C8H7NO+Na+,Mandelonitrile,Organoheterocyclic compounds,Indoles and derivatives,Hydroxyindoles,2.9416463,9.81079
+146,C6H8N2O2+H+,Pi-Methylimidazoleacetic acid,Organoheterocyclic compounds,Azoles,Imidazoles,3.6025805,10.736791
+147,C24H34O2+H+,"1,1'-[1,12-Dodecanediylbis(oxy)]bisbenzene",Benzenoids,Phenol ethers,,15.165833,-10.749936
+148,C30H52NO7P+H+,"LysoPC(22:5(7Z,10Z,13Z,16Z,19Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.682035,-10.958321
+149,C14H17N5O8+H+,Succinyladenosine,"Nucleosides, nucleotides, and analogues",Purine nucleosides,,3.0340576,9.640277
+150,C32H49NO5+Na+,Daphniphylline,Alkaloids and derivatives,Daphniphylline-type alkaloids,,3.2828486,10.102095
+151,C4H7N3O+Na+,Creatinine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",2.7026262,-5.7235427
+152,C5H4N4O+H+,Hypoxanthine,Organoheterocyclic compounds,Imidazopyrimidines,Purines and purine derivatives,2.6016033,-5.903302
+153,C10H9NO+H+,Indoleacetaldehyde,Benzenoids,Naphthalenes,,2.509787,-5.9935036
+154,C28H48NO7P+H+,"LysoPC(20:5(5Z,8Z,11Z,14Z,17Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,3.3852556,10.351095
+155,C29H48O4+H+,"(3beta,5alpha,6beta,9alpha,22E,24R)-23-Methylergosta-7,22-diene-3,5,6,9-tetrol",Lipids and lipid-like molecules,Prenol lipids,Quinone and hydroquinone lipids,15.030715,-11.321421
+156,C21H26O4+H+,7-(4-Hydroxy-3-methoxyphenyl)-5-methoxy-1-phenyl-3-heptanone,Phenylpropanoids and polyketides,Diarylheptanoids,Linear diarylheptanoids,15.131683,-10.75499
+157,C3H10NO4P+H+,N-Methylethanolaminium phosphate,Organic acids and derivatives,Organic phosphoric acids and derivatives,Phosphate esters,2.8299372,-6.4585314
+158,C5H5N5O+H+,Guanine,Organoheterocyclic compounds,Imidazopyrimidines,Purines and purine derivatives,3.4817169,10.764205
+159,C10H14N5O8P+H+,Cyclic pyranopterin monophosphate,Organoheterocyclic compounds,Pteridines and derivatives,Pterins and derivatives,3.5568488,10.307972
+160,C23H44NO7P+H+,"LysoPE(18:2(9Z,12Z)/0:0)",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphoethanolamines,3.3564723,9.864848
+161,C16H28O8+H+,Foeniculoside VII,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,14.725125,-11.015882
+162,C30H50NO7P+H+,"LysoPC(22:6(4Z,7Z,10Z,13Z,16Z,19Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,2.7085538,-6.5304966
+163,C9H15N3O2S+H+,Ergothioneine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",3.0202255,9.612014
+164,C18H26O4+H+,Capsiate,Organoheterocyclic compounds,Benzopyrans,1-benzopyrans,15.032821,-11.104752
+165,C18H12O7+H+,"16-hydroxy-12-methoxy-5,7,9,21-tetraoxahexacyclo[11.8.0.0²,¹⁰.0³,⁸.0⁴,⁶.0¹⁵,²⁰]henicosa-1(13),2(10),11,15,17,19-hexaen-14-one",Benzenoids,Phenols,Benzenediols,15.129356,-10.806189
+166,C27H44NO7P+H+,"LysoPE(22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphoethanolamines,15.265331,-10.9284525
+167,C23H46NO7P+H+,LysoPE(18:1(9Z)/0:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphoethanolamines,15.019944,-11.360846
+168,C15H27NO2Si2+H+,"N,O-Bis- (trimethylsilyl)phenylalanine",Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",3.4819086,10.320039
+169,C14H10O8+H+,"2-(3,4-Dihydroxybenzoyloxy)-4,6-dihydroxybenzoate",Phenylpropanoids and polyketides,Depsides and depsidones,,2.6834333,-6.5815325
+170,C21H20O7+H+,"7,14-dihydroxy-6-methoxy-4,12-dimethyl-5-(3-methylbut-2-enoyl)-2,9-dioxatricyclo[9.4.0.0³,⁸]pentadeca-1(11),3(8),4,6,12,14-hexaen-10-one",Benzenoids,Benzene and substituted derivatives,Benzoic acids and derivatives,2.6063244,-6.0513253
+171,C24H51NO7P+H+,1-palmitoylglycerophosphocholine,0,0,0,2.6119905,-5.946128
+172,C5H5N5+H+,Adenine,Organoheterocyclic compounds,Imidazopyrimidines,Purines and purine derivatives,2.5726292,-6.422263
+173,C37H47NO4+H+,Janthitrem C,Organoheterocyclic compounds,Naphthopyrans,,15.045499,-11.254973
+174,C19H37NO4+H+,Dodecanoylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,2.802752,-5.8016486
+175,C18H24O3+H+,7alpha-hydroxyestradiol,Lipids and lipid-like molecules,Steroids and steroid derivatives,Estrane steroids,2.4583137,-5.7307587
+176,C6H6N2O+H+,2-Acetylpyrazine,Organic oxygen compounds,Organooxygen compounds,Carbonyl compounds,15.358769,-10.775148
+177,C14H20N6O5S+H+,S-Adenosylhomocysteine,"Nucleosides, nucleotides, and analogues",5'-deoxyribonucleosides,5'-deoxy-5'-thionucleosides,2.401279,-6.4309473
+178,C24H31ClO8+H+,Melleolide D,Lipids and lipid-like molecules,Prenol lipids,Sesquiterpenoids,2.49777,-5.6718287
+179,C20H16O7+H+,"3,5-dihydroxy-8-(hydroxymethyl)-2-(4-hydroxyphenyl)-8-methyl-4H,8H-pyrano[2,3-f]chromen-4-one",Phenylpropanoids and polyketides,Isoflavonoids,Rotenoids,2.25007,-6.0858254
+180,C15H10O5+H+,"2-[(3,4-dihydroxyphenyl)methylidene]-6-hydroxy-2,3-dihydro-1-benzofuran-3-one",Phenylpropanoids and polyketides,Isoflavonoids,Isoflav-2-enes,2.6406026,-6.583969
+181,C19H19NO3+H+,Koenigine,Organoheterocyclic compounds,Indoles and derivatives,Carbazoles,2.7708156,-6.410155
+182,C11H15N2O8P+H+,Nicotinamide ribotide,"Nucleosides, nucleotides, and analogues",Pyridine nucleotides,Nicotinamide nucleotides,2.6856027,-6.3628745
+183,C15H10O4+H+,"4,6-dihydroxy-2-(phenylmethylidene)-2,3-dihydro-1-benzofuran-3-one",Phenylpropanoids and polyketides,Isoflavonoids,Isoflav-2-enes,2.5318012,-6.0403395
+184,C31H42O9+H+,Glycinoeclepin B,Lipids and lipid-like molecules,Prenol lipids,Sesquiterpenoids,2.3868818,-6.5782905
+185,C28H46O4+K+,3-Dehydroteasterone,Lipids and lipid-like molecules,Steroids and steroid derivatives,Ergostane steroids,2.6666038,-6.014802
+186,C26H45NO7S+Na+,Taurohyocholate,Lipids and lipid-like molecules,Steroids and steroid derivatives,"Bile acids, alcohols and derivatives",21.956469,8.406513
+187,C24H30F2O6+Na+,Fluocinolone Acetonide,Lipids and lipid-like molecules,Steroids and steroid derivatives,Hydroxysteroids,16.109488,9.077586
+188,C15H29NO5+H+,3-hydroxyoctanoyl carnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,22.160318,7.5813537
+189,C17H26O4+Na+,Myrsinone,Lipids and lipid-like molecules,Prenol lipids,Sesquiterpenoids,21.733215,8.285903
+190,C18H23NO4+H+,Arbutamine,Benzenoids,Benzene and substituted derivatives,Benzenesulfonamides,21.885931,7.910407
+191,C16H18N6O5+Na+,N-[(5-Hydroxy-2-pyridinyl)methyl]adenosine,"Nucleosides, nucleotides, and analogues",Purine nucleosides,,16.234694,8.940097
+192,C6H12O6+Na+,allo-inositol,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,22.359749,7.421202
+193,C25H36O3+H+,Persicachrome,Lipids and lipid-like molecules,Prenol lipids,Diterpenoids,21.743809,8.113219
+194,C19H24O4+H+,3-[8-hydroxy-2-methyl-2-(4-methylpent-3-en-1-yl)-2H-chromen-5-yl]propanoic acid,Phenylpropanoids and polyketides,Cinnamic acids and derivatives,Hydroxycinnamic acids and derivatives,21.984072,8.346666
+195,C18H29NO2+H+,Penbutolol,Benzenoids,Phenol ethers,,22.022808,8.045844
+196,C27H54NO7P+H+,LysoPE(22:1(13Z)/0:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphoethanolamines,14.5128975,13.4675255
+197,C12H23NO4+H+,Pivaloylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,22.200455,8.51917
+198,C15H15NO3+H+,Tolmetin,Organic oxygen compounds,Organooxygen compounds,Carbonyl compounds,22.06209,8.4715185
+199,C24H29NO9+H+,Codeine-6-glucuronide,Alkaloids and derivatives,Morphinans,,22.119022,8.307089
+200,C21H26O3+H+,Acitretin,Lipids and lipid-like molecules,Prenol lipids,Retinoids,22.258194,7.438826
+201,C30H26O9+H+,"8-[3,7-dihydroxy-2-(3-hydroxyphenyl)-3,4-dihydro-2H-1-benzopyran-4-yl]-2-(3-hydroxyphenyl)-3,4-dihydro-2H-1-benzopyran-3,5,7-triol",Phenylpropanoids and polyketides,Flavonoids,Biflavonoids and polyflavonoids,22.250765,8.114498
+202,C15H23N5O3+H+,Phenylalanyl-Arginine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",22.001547,7.682241
+203,C14H18N5O11P+H+,"N(6)-(1,2-dicarboxyethyl)AMP",Benzenoids,Benzene and substituted derivatives,Biphenyls and derivatives,22.279135,7.5034785
+204,C18H30O+H+,"2-(5,8-Tetradecadienyl)cyclobutanone",Lipids and lipid-like molecules,Prenol lipids,Diterpenoids,16.152338,8.833257
+205,C17H13NO3+H+,Avenalumin II,Organoheterocyclic compounds,Quinolines and derivatives,,22.179613,8.086327
+206,C7H7NO2+H+,2-Pyridylacetic acid,Benzenoids,Benzene and substituted derivatives,Benzoic acids and derivatives,22.203024,8.576293
+207,C12H22N4O5+H+,Neuromedin B (1-3),Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",21.967752,8.283311
+208,C26H44O8+H+,Goshonoside F2,Lipids and lipid-like molecules,Prenol lipids,Terpene glycosides,22.187721,7.591492
+209,C32H66NO7P+H+,LysoPC(24:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,22.013365,8.444897
+210,C14H29NaO4S+H+,Sodium Tetradecyl Sulfate,Organic acids and derivatives,Organic sulfuric acids and derivatives,Sulfuric acid esters,22.349379,8.452826
+211,C25H31N3O4+H+,"N1,N10-Dicoumaroylspermidine",Phenylpropanoids and polyketides,Cinnamic acids and derivatives,Hydroxycinnamic acids and derivatives,21.884779,7.7502394
+212,C5H11NO2+H+,Betaine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",22.311327,7.4893117
+213,C11H19NO6+H+,Methylmalonylcarnitine,Lipids and lipid-like molecules,Fatty Acyls,Fatty acid esters,22.171394,8.350311
+214,C16H12O9+H+,"3,5,7-trihydroxy-6-methoxy-2-(2,4,5-trihydroxyphenyl)-4H-chromen-4-one",Phenylpropanoids and polyketides,Flavonoids,Flavones,21.774189,8.359383
+215,C7H16NO3+,(S)-carnitinium,Organic nitrogen compounds,Organonitrogen compounds,Quaternary ammonium salts,21.732723,8.330666
+216,C34H48O7+,"(24E)-3alpha,15alpha-Diacetoxy-23-oxo-7,9(11),24-lanostatrien-26-oic acid",Lipids and lipid-like molecules,Prenol lipids,Triterpenoids,14.285105,14.482892
+217,C24H51NO7P+,2-Palmitoylglycerophosphocholine,0,0,0,15.468534,14.546825
+218,C12H18O6+,"1,1'-(Tetrahydro-6a-hydroxy-2,3a,5-trimethylfuro[2,3-d]-1,3-dioxole-2,5-diyl)bis-ethanone",Organic oxygen compounds,Organooxygen compounds,Ethers,15.092368,14.005645
+219,C26H53NO7P+,2-Oleoylglycerophosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.422904,14.620142
+220,C13H15N3O2+Na+,OR-1896,Benzenoids,Benzene and substituted derivatives,Anilides,14.928676,14.142055
+221,C9H12O4+,Vanylglycol,Lipids and lipid-like molecules,Prenol lipids,Quinone and hydroquinone lipids,15.198074,14.752915
+222,C5H15NO4P+,Phosphorylcholine,Organic nitrogen compounds,Organonitrogen compounds,Quaternary ammonium salts,15.195285,14.260193
+223,C18H23NO4+,beta-oxycodol,Benzenoids,Benzene and substituted derivatives,Benzenesulfonamides,14.7186985,14.336915
+224,C10H17N2O5+Na+,Valyl-Glutamate,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",15.221246,14.740731
+225,C19H22N2O+Na+,(R)-Rhazinilam,Benzenoids,,,15.262466,14.792743
+226,C9H17NO8+H+,N-(1-Deoxy-1-fructosyl)serine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",14.598152,14.630996
+227,C14H16O6+,Gravolenic acid,Phenylpropanoids and polyketides,Cinnamic acids and derivatives,Hydroxycinnamic acids and derivatives,15.075869,14.916218
+228,C12H16N2O5+,Seryltyrosine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",14.724773,14.421777
+229,C15H15NO3+Na+,Tolmetin,Organic oxygen compounds,Organooxygen compounds,Carbonyl compounds,15.369687,14.53993
+230,C6H15N4O2+,L-argininium(1+),Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",14.603649,14.411896
+231,C26H52NO7P+Na+,2-oleoyl-sn-glycero-3-phosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.502125,14.30614
+232,C10H13N5O5+Na+,8-Hydroxy-deoxyguanosine,"Nucleosides, nucleotides, and analogues",Purine nucleosides,Purine 2'-deoxyribonucleosides,15.027523,13.767383
+233,C8H18NO2+,Propionylcholine,Organic nitrogen compounds,Organonitrogen compounds,Quaternary ammonium salts,14.363745,14.7101345
+234,C26H48NO7P+H+,"LysoPC(18:3(9Z,12Z,15Z))",Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.762892,14.230986
+235,C10H15N3O5+Na+,Pyro-L-glutaminyl-L-glutamine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",14.32222,14.914593
+236,C16H33NO3+H+,Lauroyl diethanolamide,Lipids and lipid-like molecules,Fatty Acyls,Fatty amides,14.751877,14.880783
+237,C28H51NO7P+,2-Arachidonoylglycerophosphocholine,Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.451796,13.719899
+238,C32H48O7+,Hovenidulcigenin A,Lipids and lipid-like molecules,Prenol lipids,Terpene lactones,15.34325,14.290791
+239,C26H55NO7P+,1-Stearoylglycerophosphocholine,0,0,0,15.384736,14.660067
+240,C27H44O7+,Crustecdysone,Lipids and lipid-like molecules,Steroids and steroid derivatives,"Bile acids, alcohols and derivatives",14.989554,13.963303
+241,C34H50O7+,Ganodermic acid P2,Lipids and lipid-like molecules,Prenol lipids,Triterpenoids,14.881745,13.65899
+242,C30H46O7+,Perulactone,Lipids and lipid-like molecules,Prenol lipids,Triterpenoids,15.345095,14.434948
+243,C10H14N5O5+,arabinofuranosylguanine,"Nucleosides, nucleotides, and analogues",Purine nucleosides,,14.434765,14.856717
+244,C10H13N5O5+H+,8-Hydroxy-deoxyguanosine,"Nucleosides, nucleotides, and analogues",Purine nucleosides,Purine 2'-deoxyribonucleosides,14.342901,14.804166
+245,C25H30N3+,Gentian Violet,Benzenoids,Benzene and substituted derivatives,Diphenylmethanes,14.227299,14.552628
+246,C10H15N3O5+H+,Pyro-L-glutaminyl-L-glutamine,Organic acids and derivatives,Carboxylic acids and derivatives,"Amino acids, peptides, and analogues",14.591067,13.698696
+247,C15H14O11+,2-O-Caffeoylhydroxycitric acid,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,14.987834,15.038788
+248,C13H24N4O3S+H+,Timolol,Organic nitrogen compounds,Organonitrogen compounds,Amines,15.534469,14.687279
+249,C17H12O5+,Gyrocyanin,Benzenoids,Phenols,1-hydroxy-2-unsubstituted benzenoids,14.2719555,14.724885
+250,C18H33NO+H+,Linoleamide,Lipids and lipid-like molecules,Fatty Acyls,Fatty amides,14.765756,14.505672
+251,C12H20N2O7+H+,Deoxyfructosazine,Organoheterocyclic compounds,Diazines,Pyrazines,14.603412,14.083513
+252,C28H56NO7P+H+,PC(18:1(9Z)e/2:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphocholines,14.45015,14.04997
+253,C9H9NO3+H+,Adrenochrome,Organoheterocyclic compounds,Indoles and derivatives,,15.085889,13.933021
+254,C25H50NO7P+H+,LysoPE(20:1(11Z)/0:0),Lipids and lipid-like molecules,Glycerophospholipids,Glycerophosphoethanolamines,15.07921,14.141499
+255,C8H14N3O7P+H+,5-Aminoimidazole ribonucleotide,Organic oxygen compounds,Organooxygen compounds,Carbohydrates and carbohydrate conjugates,15.018419,13.840182
+256,C14H26N4O11P2+H+,Citicoline,"Nucleosides, nucleotides, and analogues",Pyrimidine nucleotides,Pyrimidine ribonucleotides,14.787908,14.876375

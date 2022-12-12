@@ -14,11 +14,16 @@ from metaspace import SMInstance
 import re
 
 from sklearn.preprocessing import MultiLabelBinarizer
-    from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity
 
 from viz import get_ds_list, get_ion_imgs, ion_cluster, plot_ion_imgs, label_point, imshow_ions, cluster_viz
-from metadata import get_meta_df
+from metadata import get_meta_df, post_processing
 
+
+#%%
+# testing post_processing
+test = post_processing('RW_output/vectors_TF_RW_validation_w1moreions_size100_ww5_rw.tsv',
+                        'RW_output/metadata_TF_RW_validation_w1moreions_size100_ww5_rw.tsv')
 #%% 
 # defaults, constants and helper functions
 plt.rcParams['figure.figsize'] = (13,9)

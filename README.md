@@ -60,10 +60,12 @@ The model yields two files, one vector and one meta file. The meta file holds th
 
 For visualization one can for instance simply read in a model output file (one text or two tsv files) in the [post_viz notebook](post_viz.ipynb) and run the code cells. An example run can be seen in [interactive_viz.ipynb](interactive_viz.ipynb) where we load, postprocess and visualiza data for different models and hyperparameters. <br>
 
-Some model outputs can be found for the [Vanilla](slurm_job/Vanilla_output/) and [Random Walk](RW_output/). The file name generally follows the scheme 
+Some model outputs can be found for the [Vanilla](slurm_job/Vanilla_output/) and [Random Walk](RW_output/). The file names usually convey data and hyperparameter info, e.g. file names with `validation` imply that the models were trained on the mentioned validation datasets. For instance in
 ```
-vectors_TF_RW_validation_IMAGE_WINDOW_SIZE_*_EMBEDDING_DIMENSION_TEXT_WINDOW_SIZE_rw.tsv
+vectors_TF_RW_validation_w5moreions_size100_ww5_rw.tsv
 ```
+we have vectors for the tensor flow random walk implementation (`TF_RW`), trained on the validation datasets (`validation`), using a image window of size 5 (`w5`), trained on all ions of the datasets (, `moreions`, not only on the query ions), embedding dimension 100 (`size100`) and text window size 5 (`ww5`). 
+`
 
 [^1]: We have used an old version of gensim (version 3.4.0) as we built upon [Katja's old model](https://github.com/eovchinn/word2vec_pixel). 
 [^2]: It can be run theoretically by the gensim vanilla version, too. One simply has to import `PixelCorpusRW` from [PixelCorpora.py](PixelCorpora.py) in the `word2vec_pix.py` script instead of using the default PixelCorpus class. 

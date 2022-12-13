@@ -33,11 +33,21 @@ The vanilla training runs via [word2vec_pix.py](word2vec_pix.py), which bases on
 
 We can train the Vanilla model by running from the command line
 ```
-python word2vec_pix.py -train DATA_DIR -ind_name TRAIN_IONS.pickle -iter EPOCHS -threads WORKERS -output OUTPUT_FILE_NAME -size VECTOR_DIMENSION -window IMAGE_WINDOW_SIZE
+python word2vec_pix.py -train DATA_DIR -ind_name TRAIN_IONS.pickle -iter EPOCHS -threads WORKERS -output OUTPUT_FILE_NAME -size VECTOR_DIMENSION -window IMAGE_WINDOW_SIZE`
 ```
 Some more arguments - for instance to reduce the amount of data like window stride `-stride`, pixel sampling percentage `pix_per` - can be given and are explained in the python script itself. <br>
+Note that a `window` of 5 relates to a $(2 \cdot 5 +1) \times (2 \cdot 5 +1)$ image window. <br>
 The script yields two files, one .txt and one binary. Theoretically, the binary file can be loaded via the gensim functionalities and trained further or used for post-processing. We restricted ourselves to use the vectors which can be found in the text file. 
 
 ### Random Walk
+The random walk training file [rw_train.py](rw_train.py) runs with Tensorflow[^2]. 
 
-[^1]: We have actually used an old version of gensim (version 3.4.0) as we built the model on Katja's old model. 
+We can train the Random Walk model by running from the command line
+```
+python rw_train.py -train DATA_DIR -ind_name TRAIN_IONS.pickle -iter EPOCHS -threads WORKERS -output OUTPUT_FILE_NAME -size VECTOR_DIMENSION -window IMAGE_WINDOW_SIZE -word_window TEXT_WINDOW -rw 1 
+```
+Note the two additional parameters `word_window`and `rw`. In comparison to the Vanilla model, we do not naturally train on the whole image window, but rather pick an additional (one dimensional) `word_window` that sets the window size with which we go over the 'output text'. This can be advantageous as the random walk model encodes spatial information of the image window. <br>
+We can also set `rw` to 0, to run with the regular corpus building instead of the random walk. We discourage from making use of the 'Vanilla TensorFlow' (i.e. `-rw 0`) for now as it was hardly tested and assumes some sense of locality which is not given in the vanilla image window output. 
+
+[^1]: We have used an old version of gensim (version 3.4.0) as we built upon [Katja's old model](https://github.com/eovchinn/word2vec_pixel). 
+[^2]: It can be run theoretically by the gensim vanilla version, too. One simply has to import `PixelCorpusRW` from [PixelCorpora.py](PixelCorpora.py) in the `word2vec_pix.py` script instead of using the default PixelCorpus class. 

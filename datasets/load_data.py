@@ -16,7 +16,7 @@ args = parser.parse_args()
 if args.dsid:
     for ds_id in args.dsid:
         ds, ion_names = create_pixel_df(ds_id, fdr=args.fdr)
-        save = ds.to_pickle(os.path.join(args.output, f'pixel_df_{ds_id}.pickle'))
+        save = ds.to_pickle(os.path.join(args.output, f'pixel_df_{ds_id}.pickle'), protocol=4)
 
 if args.csv:
     ds_df = pd.read_csv(f'{args.csv}')
@@ -26,4 +26,4 @@ if args.csv:
         # sparse_df = ds.astype(pd.SparseDtype('float', 0))
         # save_sparse = sparse_df.to_pickle(f'pixel_df_{ds_id}.pickle')
         # save = ds.to_csv(f'pixel_df_{ds_id}.csv', index=False)
-        save = ds.to_pickle(os.path.join(args.output, f'pixel_df_{ds_id}.pickle'))
+        save = ds.to_pickle(os.path.join(args.output, f'pixel_df_{ds_id}.pickle'), protocol=4)

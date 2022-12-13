@@ -37,7 +37,7 @@ ds_df = pd.read_csv('datasets/theos_recom/ions_datasets.csv') # mapping ions to 
 
 class post_processing:
     def __init__(self, vec_file, name_file = None, u_embed = False, 
-                dsid_list = None, dsname_list = None, fdr = 0.1,
+                dsid_list = None, fdr = 0.1,
                 metahost = 'https://metaspace2020.eu', molbase = 'HMDB-v4'):
 
         self.vec_file = vec_file    # embedded vectors, .tsv from TF, .txt from gensim

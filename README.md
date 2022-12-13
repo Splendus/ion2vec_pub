@@ -39,3 +39,5 @@ Some more arguments - for instance to reduce the amount of data like window stri
 The script yields two files, one .txt and one binary. Theoretically, the binary file can be loaded via the gensim functionalities and trained further or used for post-processing. We restricted ourselves to use the vectors which can be found in the text file. 
 
 ### Random Walk
+
+[^1]: We have actually used an old version of gensim (version 3.4.0) as we built the model on Katja's old model. 

@@ -22,8 +22,10 @@ from metadata import get_meta_df, post_processing
 
 #%%
 # testing post_processing
-test = post_processing('RW_output/vectors_TF_RW_validation_w1moreions_size100_ww5_rw.tsv',
-                        'RW_output/metadata_TF_RW_validation_w1moreions_size100_ww5_rw.tsv')
+vec_file = 'RW_output/vectors_TF_RW_validation_w1moreions_size100_ww5_rw.tsv'
+name_file ='RW_output/metadata_TF_RW_validation_w1moreions_size100_ww5_rw.tsv' 
+test = post_processing(vec_file, name_file, u_embed=True)
+meta_df = test.get_info_df()
 #%% 
 # defaults, constants and helper functions
 plt.rcParams['figure.figsize'] = (13,9)
@@ -51,12 +53,14 @@ for ds_id in ds_ids:
     off_sample += tmp
 
 # Loading coloc ions
-with open("triple_ions.pickle", "rb") as trip: # query ions: Annotated in all three datasets
+with open("triple_ions.pickle", "rb") as trip: # ions annotated in all three datasets
     triple_ions = pickle.load(trip)
-with open("top_ions.pickle", "rb") as top: # ions with high coloc w.r.t. query ions
+with open("top_ions.pickle", "rb") as top: # ions with high coloc w.r.t. triple_ions
     top_ions = pickle.load(top)
-with open("bot_ions.pickle", "rb") as bot: # ions with low coloc w.r.t. query ions
+with open("bot_ions.pickle", "rb") as bot: # ions with low coloc w.r.t. triple_ions
     bot_ions = pickle.load(bot)
+with open("train_ions.pickle", "rb") as query:
+    query_ions = pickle.load(query)
 
 # load the train_df (coloc of all ions in the 3 datasets with each other)
 train_df = pd.read_csv('train_ions.csv', index_col=0)
@@ -65,6 +69,7 @@ by_row_index = train_df.groupby(train_df.index)
 mean_coloc_df = by_row_index.mean() # building the mean coloc spanning the 3 datasets
 mean_coloc_df = mean_coloc_df[mean_coloc_df.index]
 
+#%%
 def get_coloc_dict(df):
     ions = df['ion']
     d = {}
@@ -106,7 +111,19 @@ def preprocess_meta_df(df, ds_ids = ds_ids):
     return df
 
 
-def nocoloc_distances(coloc_df, cos_df, mean_coloc_df = mean_coloc_df):
+def noco_distances(mean_coloc_df, cos_df):
+    '''
+    params:
+    --------
+    mean_coloc_df : coloc_df averaged over train datasets
+                    necessary for co-occurrence info
+    cos_df        : cosine similarity df 
+
+    returns:
+    --------
+    (no_dist, co_dist): a tuple of dictionaries, with entries for non and co-occurring ions
+                        with individual entries (ion_1, ion_2) : cosine_sim(ion_1, ion_2)
+    '''
     noco_ions = [(ion1, ion2)    
         for ion1 in mean_coloc_df.index for ion2 in mean_coloc_df.columns 
         if mean_coloc_df.isna().loc[ion1, ion2]]
@@ -124,6 +141,15 @@ def nocoloc_distances(coloc_df, cos_df, mean_coloc_df = mean_coloc_df):
 
     return no_dist, co_dist
 
+def cos_coloc_dict(mean_coloc_df, cos_df):
+    '''
+    returns a dictionary with ion pair keys and (cos_sim, coloc) values
+    '''
+    cos_df = cos_df.loc[mean_coloc_df.index, mean_coloc_df.columns]
+    cos_coloc_dict = {
+        (ion1, ion2): (cos_df.loc[ion1,ion2], mean_coloc_df.loc[ion1, ion2]) 
+        for ion1 in cos_df.index for ion2 in mean_coloc_df.index}
+    return cos_coloc_dict
 
 def pre_process(model, vec_file, meta_file = None, embed=True):
     if model == 'rw':
@@ -169,10 +195,18 @@ vanilla_all50_dists = {}
 
 for i in range(1,6):
     try:
-        gen_file = f"slurm_job/gensim_validation_w{i}_noshuff30size50moreions.model.txt"
-        (vanilla_all50_dfs[f'w{i}'],
-        vanilla_all50_coords[f'w{i}'], 
-        vanilla_all50_dists[f'w{i}']) = pre_process('vanilla', gen_file) 
+        gen_file = f"slurm_job/Vanilla_output/gensim_validation_w{i}_noshuff30size50moreions.model.txt"
+        p = post_processing(gen_file, u_embed=True, dsid_list=ds_ids)
+        df = p.get_info_df()
+        col_df = p.get_mean_coloc(ds_ids, query_ions)
+        cos_df = p.get_embed_sim(query_ions)
+        
+        ion2coloc=get_coloc_dict(df) # add coloc info
+        df['coloc'] = df['ion'].map(ion2coloc) 
+
+        vanilla_all50_dfs[f'w{i}'] = df
+        vanilla_all50_coords[f'w{i}'] = cos_coloc_dict(col_df, cos_df)
+        vanilla_all50_dists[f'w{i}'] = noco_distances(col_df, cos_df)
     except FileNotFoundError:
          continue
 

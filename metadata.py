@@ -2,6 +2,7 @@ import os
 import ast
 
 import numpy as np, pandas as pd
+import scipy
 import matplotlib.pyplot as plt, seaborn as sns
 import umap 
 import pickle
@@ -12,6 +13,7 @@ from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.metrics import pairwise_kernels
 from sklearn.metrics.pairwise import cosine_similarity
 
 def read_gensim_txt(f_path, dictionary = False):
@@ -27,7 +29,7 @@ def read_gensim_txt(f_path, dictionary = False):
 
 # Constants
 mol_df = pd.read_csv('Ions2Molecules.csv') # mapping ion to molecule names
-hmdb_df  = pd.read_csv('datasets/HMDB4_database.csv')
+hmdb_df  = pd.read_csv('datasets/HMDB4_database.csv') # containing metabolite info
 id_df   = pd.read_csv('datasets/ions2ids.csv') # mapping ions to HMDB ids
 ion2hmdb  = {ion: ast.literal_eval(id_df[id_df['ion']==ion]['hmdbID'].item())
                         for ion in id_df['ion']}
@@ -35,14 +37,15 @@ ds_df = pd.read_csv('datasets/theos_recom/ions_datasets.csv') # mapping ions to 
 
 class post_processing:
     def __init__(self, vec_file, name_file = None, u_embed = False, 
-                dsid_list = None, dsname_list = None,
+                dsid_list = None, dsname_list = None, fdr = 0.1,
                 metahost = 'https://metaspace2020.eu', molbase = 'HMDB-v4'):
 
-        self.vec_file = vec_file    # embedded vectors, .tsv from TF .txt from gensim
+        self.vec_file = vec_file    # embedded vectors, .tsv from TF, .txt from gensim
         self.name_file = name_file  # ion name file, only from TF
         self.u_embed = u_embed      # if a new UMAP embedding has to be created
-        self.dsids = dsid_list      # list of datasets ids, the embeddings were trained on
+        self.ds_ids = dsid_list     # list of datasets ids, the embeddings were trained on
         self.host = metahost        # host for the metaspace API
+        self.fdr  = fdr             # False Detection Rate
         self.molbase = molbase      # annotation database
         self.iv_df, self.name_df = self.get_vecs() # ion_vector dataframe, ion_name dataframe
         self.ion_names = self.name_df[0].tolist() 
@@ -73,7 +76,7 @@ class post_processing:
         for ion in self.ion_names: 
             for ID in ion2hmdb[ion]:
                 try:
-                    ion2class_dict[ion] = hmdb[hmdb['accession'] == ID]['class_type'].item()
+                    ion2class_dict[ion] = hmdb_df[hmdb_df['accession'] == ID][class_type].item()
                 except ValueError: # some ions miss HMDB-ID
                     continue
         return ion2class_dict
@@ -94,14 +97,15 @@ class post_processing:
         ---------
         meta_df : Dataframe containing all meta information about the ions. 
         '''
-        meta_df = self.vec_names.rename(columns={0:'ion'})
+        meta_df = self.name_df.rename(columns={0:'ion'})
         meta_df['mol_name'] = [mol_df[mol_df['ions'] == ion]['moleculeNames'].item() for ion in meta_df['ion']] # adding molecular names
         # adding ion classes
         for class_type in ['super_class', 'class', 'sub_class']:
             ion2class_dict = self.get_class(class_type)
             meta_df[class_type] = meta_df['ion'].map(ion2class_dict)
-        
-        meta_df['dataset_ids'] = meta_df['ion'].map(ion2ds_dict) # adding dataset_ids as list
+
+        # adding dataset_ids as list
+        meta_df['dataset_ids'] = meta_df['ion'].map(self.ion2ds_dict) 
         # ion2ds_dict maps ion to all ds_ids in theos_recom folder
         # if not trained on all datasets, a ds_list has to be given 
         if self.ds_ids:
@@ -122,7 +126,7 @@ class post_processing:
         for ds_id in list(multi_hot.classes_): # multi_hot.classes are the unique ds_ids
             molset = sm.dataset(self.molbase, ds_id)
             ds_ids2ds_names[ds_id] = molset.name #mapping ds_ids to ds_names
-            results = molset.results(fdr=0.1)
+            results = molset.results(fdr=self.fdr)
             # temporary dicts for ionformula, formula and adduct
             temp_if = results.set_index('ion').to_dict()['ionFormula']
             temp_f = results.reset_index(level=['formula']).set_index('ion').to_dict()['formula']
@@ -162,7 +166,7 @@ class post_processing:
 
             # Do not scale for the time being, vectors should be scales already
             # scaled_vectors = StandardScalar().fit_transform(iv) 
-            embedding = reducer.fit_transform(self.iv)
+            embedding = reducer.fit_transform(self.iv_df)
 
             name2x = {name: embedding[i][0] for i, name in enumerate(self.ion_names)}
             name2y = {name: embedding[i][1] for i, name in enumerate(self.ion_names)}
@@ -170,33 +174,40 @@ class post_processing:
             meta_df['umap_x'] = meta_df['ion'].map(name2x)
             meta_df['umap_y'] = meta_df['ion'].map(name2y)
 
+        meta_df.insert(1, 'formula', meta_df.pop('formula')) # reordering
+        meta_df.insert(2, 'adduct', meta_df.pop('adduct')) # reordering
+        meta_df.insert(3, 'ionFormula', meta_df.pop('ionFormula')) # reordering
+
         return meta_df
 
-    def get_embed_sim(self):
+    def get_embed_sim(self, query_ions = None):
         '''
         returns cosine similarity matrix for embedding
         '''
-        cos_df = pd.DataFrame(cosine_similarity(self.iv))
+        cos_df = pd.DataFrame(cosine_similarity(self.iv_df))
 
-        idx2ion = self.vec_names.to_dict()[0]
+        idx2ion = self.name_df.to_dict()[0]
         cos_df.index = cos_df.index.map(idx2ion)
         cos_df.columns = cos_df.columns.map(idx2ion)
+        if query_ions: # if only for query_ions
+            cos_df = cos_df.loc[query_ions, query_ions]
         return cos_df 
     
-    def get_coloc_df(self, dsid):
+    def get_coloc_df(self, ds_id, only_first_isotope = True, scale_intensity = False,
+                    hotspot_clipping = False, offSample = False):
         '''
-        returns a colocalization dataframe for the dataset given by dsid.
+        returns a colocalization dataframe for the dataset given by ds_id.
         Note, that this is a work around for the validation datasets, where
         only positive adducts were considered.  
         '''
-        sm = metaspace.SMInstance()
+        sm = SMInstance()
         ds = sm.dataset(id=ds_id)
-        tmp = ds.all_annotation_images(fdr=fdr,
-                                    database=database,
+        tmp = ds.all_annotation_images(fdr=self.fdr,
+                                    database=self.molbase,
                                     only_first_isotope=only_first_isotope,
                                     scale_intensity=scale_intensity,
                                     hotspot_clipping=hotspot_clipping,
-                                    offSample = False)
+                                    offSample = offSample)
         ion_array = np.array(
             [scipy.signal.medfilt2d(x._images[0], kernel_size=3).flatten() for x in tmp])
         df = pd.DataFrame(pairwise_kernels(ion_array, metric='cosine'),
@@ -227,10 +238,6 @@ class post_processing:
         mean_coloc_df = mean_coloc_df[mean_coloc_df.index] 
         return mean_coloc_df
 
-
-
-        
-        
 
 
 def get_meta_df(vec_file, meta_file=None, txt = False, embed=False,

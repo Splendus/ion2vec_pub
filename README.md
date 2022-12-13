@@ -26,7 +26,16 @@ The datasets in [theos_recom](datasets/theos_recom/) were recommended by Theo as
 ## Training
 Two conda environments are located in [conda-envs](conda-envs), where the main version is needed for the random walk application and is defaultly used for all other tasks - except when training the vanilla version when of course `VanillaEnv` has to be activated. We can create the environments from the yml files by
 ```
-conda env create -f ENVIRONMENT.yml
+conda env create --name ENVIRONMENT_NAME --file ENVIRONMENT.yml
 ```
+### Vanilla
+The vanilla training runs via [word2vec_pix.py](word2vec_pix.py), which bases on [gensim](https://radimrehurek.com/gensim/models/word2vec.html). Note that it can run in either slow (python only) or fast mode (cython). For the fast version, the `word2vec_inner.*` files and the `build` directory are needed. `word2vec_pix.py` imports from the files by default but reverts to the slow python-only version in case an import fails. It should work the way the directory is set up. <br>
 
-The pixel_dataframes are the basic inputs to both <code>rw_train.py</code> and <code>Word2vec_pix.py</code>. 
+We can train the Vanilla model by running from the command line
+```
+time python word2vec_pix.py -train DATA_DIR -ind_name TRAIN_IONS.pickle -iter EPOCHS -threads WORKERS -output OUTPUT_FILE_NAME -size VECTOR_DIMENSION -window IMAGE_WINDOW_SIZE
+```
+Some more arguments - for instance to reduce the amount of data like window stride `-stride`, pixel sampling percentage `pix_per` - can be given and are explained in the python script itself. <br>
+The script yields two files, one .txt and one binary. Theoretically, the binary file can be loaded via the gensim functionalities and trained further or used for post-processing. We restricted ourselves to use the vectors which can be found in the text file. 
+
+### Random Walk

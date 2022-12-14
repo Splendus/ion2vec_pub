@@ -19,7 +19,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 metahost = 'https://metaspace2020.eu'
 molbase = 'HMDB-v4'
 
-map_df = pd.read_csv('Ions2Molecules.csv')
+map_df = pd.read_csv('datasets/Ions2Molecules.csv')
 i2m_dict = map_df.set_index('ions').to_dict()['moleculeNames'] # mapping ions to molecule names
 
 

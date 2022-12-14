@@ -28,7 +28,7 @@ def read_gensim_txt(f_path, dictionary = False):
         return pd.DataFrame(ion_dict)
 
 # Constants
-mol_df = pd.read_csv('Ions2Molecules.csv') # mapping ion to molecule names
+mol_df = pd.read_csv('datasets/Ions2Molecules.csv') # mapping ion to molecule names
 hmdb_df  = pd.read_csv('datasets/HMDB4_database.csv') # containing metabolite info
 id_df   = pd.read_csv('datasets/ions2ids.csv') # mapping ions to HMDB ids
 ion2hmdb  = {ion: ast.literal_eval(id_df[id_df['ion']==ion]['hmdbID'].item())

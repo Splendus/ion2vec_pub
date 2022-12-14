@@ -1962,7 +1962,7 @@ if __name__ == "__main__":
     
     parser.add_argument("-stride", help="Stride length of window, default is 1 (no stride)", type = int, default = 1)
     parser.add_argument("-example", help="Set to 1 execute without local data and run the metaspaceAPI for an example run",
-                       type = int, choices = [0,1], default = 0)
+                       type = int, choices = [0,1], default = 0) # deprecated, was only in use for debugging
     parser.add_argument("-shuffle", help="Set to 1 to shuffle window output. Default is 0.", type = int, default = 0)
     args = parser.parse_args()
 

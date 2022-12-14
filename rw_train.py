@@ -36,7 +36,7 @@ parser.add_argument("-quan", help="Quantile parameter", type = float, default = 
 parser.add_argument("-stride", help="Stride length of window, default is 1 (no stride)", type = int, default = 1)
 parser.add_argument("-rw", help="Random walk version, default is 1 (on), else vanilla ion2vec", type = int, default=1)
 parser.add_argument("-no_samples", help="# of sampled random walks pers window", type = int, default = 5)
-parser.add_argument("-sentence_length", help ="Length of random walk")
+parser.add_argument("-sentence_length", help ="Length of random walk", type = int, default = None)
 parser.add_argument("-word_window", help="Window size in skip gram (1D).", type = int, default = 5)
     
 args = parser.parse_args()
@@ -58,7 +58,7 @@ print('Number of devices: {}'.format(strategy.num_replicas_in_sync))
 if args.rw == 1:
     corpus = PixelCorpusRW(ds_ids = args.ds_ids, ds_dir = args.train, ind_name = ind_name, fdr_thresh = args.fdr,
                            pix_per = args.pix_per, int_per = args.int_per, window = args.window, quan = args.quan,
-                           stride = args.stride, no_samples=args.no_samples)
+                           stride = args.stride, no_samples=args.no_samples, walk_length = args.sentence_length)
 else:
     corpus = PixelCorpus(ds_ids = args.ds_ids, ds_dir = args.train, ind_name = ind_name, fdr_thresh = args.fdr,
                          pix_per = args.pix_per, int_per = args.int_per, window = args.window, quan = args.quan,
@@ -67,9 +67,9 @@ else:
 ions2idx = corpus.get_ions2ids() # vocabulary
 vocab_size = len(ions2idx) + 2
 
-num_ns = args.negative
-SEED = 42
-window_size = args.word_window
+num_ns = args.negative 
+SEED = 42 #random seed
+window_size = args.word_window # text window
 AUTOTUNE = tf.data.AUTOTUNE
 embedding_dim = args.size
 

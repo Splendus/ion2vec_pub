@@ -131,7 +131,7 @@ class PixelCorpus(object): #Replaced this one
 # drop all zero columns inside window
 
 class PixelCorpusRW(object): #Replaced this one
-    def __init__(self, fdr_thresh=0.1, pix_per=0.5, int_per=0.5, window=5, quan=99., ind_name=None, ds_dir=None, ds_ids=None, stride=1, no_samples = 5, walk_length = 10):
+    def __init__(self, fdr_thresh=0.1, pix_per=0.5, int_per=0.5, window=5, quan=99., ind_name=None, ds_dir=None, ds_ids=None, stride=1, no_samples = 5, walk_length = None):
         self.fdr = fdr_thresh
         self.ds_dir = ds_dir
         self.p = pix_per
@@ -139,10 +139,12 @@ class PixelCorpusRW(object): #Replaced this one
         self.w = window
         self.q = quan
         
-        self.ind_name = ind_name
+        self.ind_name = ind_name # list of training ions
         self.ds_ids = ds_ids #new: list of metaspace dataset ids used as training data
-        self.no_samples = no_samples
-        self.stride = stride
+        self.no_samples = no_samples # number of sampled random walks
+        self.stride = stride # stride size of the image window
+        self.walk_length = walk_length # length of random walk. Right now, it is not used but
+                                       # fixed to the number of unique ions in the window
         
         
     def __iter__(self):
@@ -193,7 +195,7 @@ class PixelCorpusRW(object): #Replaced this one
                     ion_rows = window_rows.drop(columns=['y','x'])
                     ion_rows = ion_rows.loc[:, (ion_rows != 0).any(axis=0)] # drop columns with all zero entries
                     coloc_matrix = pairwise_kernels(ion_rows.T, metric='cosine') # Don't forget the Transpose
-                    n = int(len(ion_rows.columns.tolist()))
+                    n = self.walk_length or int(len(ion_rows.columns.tolist()))
                     for i in range(self.no_samples):
                         ions_idx = random_coloc_walk(coloc_matrix, n=n )
                         yield ion_rows.columns[ions_idx].tolist()

@@ -15,7 +15,7 @@ from gensim import models
 
 METAHOST = 'https://metaspace2020.eu'
 MOLDBNAME = 'HMDB-v4'
-DSID = "2016-09-22_11h16m17s"
+# DSID = "2016-09-22_11h16m17s" # example ID
 
 # Temporary directory for output
 OUTPUT_PATH = 'output'
@@ -41,7 +41,7 @@ def filter_ions(images, ann_ions):
         assert ion[:name_len] == img_ions[i][:name_len], f"{ion[:-1]} != {img_ions_filt[i]} at  i = {i}" 
     return images
 
-def create_pixel_df(dsid=DSID, dbase = MOLDBNAME, host = METAHOST, fdr = 0.1, only_first_isotope = True,
+def create_pixel_df(dsid, dbase = MOLDBNAME, host = METAHOST, fdr = 0.1, only_first_isotope = True,
                     hotspot_clipping = False, norm = True):
 
     sm = SMInstance(host = host)

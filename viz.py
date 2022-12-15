@@ -1,3 +1,6 @@
+# DEPRECATED: the post_processing class from metadata.py together with helper functions from 
+#             interactive_viz.ipynb should have all necessary functionalities for plotting
+
 import os
 import ast
 

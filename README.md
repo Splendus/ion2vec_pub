@@ -17,8 +17,8 @@ For instance, sampling for `-n 100 -org mouse -org_part brain`, leads to 100 sam
 ```
 python load_data.py -csv datasets/mouse_brain_datasets/mouse_brain.csv
 ```
-The output files will be saved as pickle. Note, that the pickle protocol is set to `4` as the vanilla version runs on `python 3.6` and not all old packages (most importantly pandas) do support pickle protocol `5`. 
-
+The output files will be saved as pickle. Note, that the pickle protocol is set to `4` as the vanilla version runs on `python 3.6` and not all old packages (most importantly pandas) do support pickle protocol `5`. <br>
+The notebook [data_selection.ipynb](data_selection.ipynb) shows how we filtered for the validation ions used as query in the [post_viz notebook](post_viz.ipynb).
 ### Datasets
 The [example dataframes](datasets/example_dfs/) are small datasets from the 100 sampled mouse brain data. They were mainly used to debug the training code, as training ran quickly on those small files. <br>
 The 100 sampled mouse brain datasets can be loaded from [mouse_brain.csv](datasets/mouse_brain_datasets/mouse_brain.csv) via load_data.py. <br>

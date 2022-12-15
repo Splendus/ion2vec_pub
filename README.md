@@ -1,5 +1,7 @@
 # ion2vec
 
+The [ProjectReport](ProjectReport.pdf) summarizes the theoretical aspects.
+
 ## Data handling
 
 ### Preprocessing
